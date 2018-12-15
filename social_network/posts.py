@@ -20,7 +20,7 @@ class TextPost(Post):  # Inherit properly
 
 class PicturePost(Post):  # Inherit properly
     def __init__(self, text, timestamp,image_url):
-        super().__init__(text)
+        super(PicturePost, self).__init__(text)
         self.timestamp = timestamp
         self.image_url = image_url
 
@@ -34,7 +34,7 @@ class PicturePost(Post):  # Inherit properly
 
 class CheckInPost(Post):  # Inherit properly
     def __init__(self, text, timestamp, latitude, longitude):
-        super().__init__(text)
+        super(CheckInPost, self).__init__(text)
         self.timestamp = timestamp
         self.latitude = latitude
         self.longitude = longitude
